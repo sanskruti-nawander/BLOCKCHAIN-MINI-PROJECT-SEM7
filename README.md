@@ -55,95 +55,75 @@ Copy code
 
 ## 📦 Installation & Setup
 
-### 1️⃣ Clone the Repository
-
-   ```bash
+🧰 Installation & Setup
+1️⃣ Clone the Repository
    git clone https://github.com/sanskruti-nawander/BLOCKCHAIN-MINI-PROJECT-SEM7.git
    cd BLOCKCHAIN-MINI-PROJECT-SEM7
+
 2️⃣ Install Dependencies
-Blockchain (Smart Contract)
-bash
-Copy code
-cd blockchain
-npm install
-Backend (API Server)
-bash
-Copy code
-cd ../backend
-npm install
-Frontend (UI)
-bash
-Copy code
-cd ../frontend
-npm install
-3️⃣ Configure Blockchain Network
-Open Ganache
+   📌 Blockchain (Smart Contract)
+   cd blockchain
+   npm install
 
-Ensure RPC Server is running at:
+📌 Backend (API Server)
+   cd ../backend
+   npm install
 
-cpp
-Copy code
-http://127.0.0.1:7545
+📌 Frontend (React UI)
+   cd ../frontend
+   npm install
+
+3️⃣ Start Ganache
+
+   Ensure Ganache RPC is running at:
+
+   http://127.0.0.1:7545
+
 4️⃣ Deploy Smart Contract
-bash
-Copy code
-cd blockchain
-truffle migrate --reset --network development
-Copy the contract address printed after deployment.
+   cd blockchain
+   truffle migrate --reset
 
-5️⃣ Add Contract Address to Backend
-Inside backend/.env, add:
 
-ini
-Copy code
-CONTRACT_ADDRESS=0xYourContractAddressHere
-6️⃣ Start Backend Server
-bash
-Copy code
-cd backend
-node server.js
-Server will start at:
+   Copy the Contract Address printed in terminal.
 
-arduino
-Copy code
-✅ Backend running → http://localhost:5000
-7️⃣ Start Frontend UI
-bash
-Copy code
-cd ../frontend
-npm run dev
-Now open:
+5️⃣ Configure Backend
 
-arduino
-Copy code
-http://localhost:5173
-🕹 Usage Flow
-Action	Steps
-Connect Wallet	Click Connect MetaMask
-Register Product	Fill name + origin → Submit
-Add Stage Update	Enter product ID + stage + location + date + info
-Track Product	Open Track Page and enter Product ID
+   Create .env inside backend/:
 
-🧠 Smart Contract Overview
-Function	Purpose
-registerProduct()	Creates blockchain entry for product
-addStage()	Logs movement / process stage
-getStages()	Retrieves complete history
+   CONTRACT_ADDRESS=0xPasteDeployedContractAddress
 
-🎥 Demo Video (Click to Watch)
+
+   Run server:
+
+   cd backend
+   node server.js
+
+
+   Backend will run at:
+
+   http://localhost:5000
+
+6️⃣ Run Frontend
+   cd ../frontend
+   npm run dev
+
+
+Open in browser:
+
+   http://localhost:5173
+
+
+🕹 Usage Guide
+Action	How it Works
+Connect Wallet	Click Connect MetaMask on landing page
+Register Product	Enter product name + origin → Submit
+Add Stage Update	Select Product ID → Enter stage data
+Track Product	Go to Tracker → Enter Product ID
+🎥 Demo Video
+
 👉 https://youtu.be/GW7ZgXXkC-o
 
-🖼 UI Preview
-sql
-Copy code
-Landing Page → Register → Add Stage → Tracker Visualization
-(Add screenshots here if you want your repo to look even more 🔥)
+🤝 Contribution & Support
 
-🤝 Contributing
-Pull requests and suggestions are welcome!
-Open issues for improvements or bugs.
-
-📜 License
-This project is licensed under the MIT License.
-
-Made with ❤️ and strong chai ☕
+Pull requests are welcome.
+For major changes, open an issue first to discuss improvements.
